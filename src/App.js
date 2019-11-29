@@ -1,17 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import FormDialog from './FormDialog';
+import { Provider } from "react-redux";
+import configureStore from "./store";
+
+import Team from './Team/Team';
+
+const reduxStore = configureStore(window.REDUX_INITIAL_DATA);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <FormDialog />
-    </div>
+    <Provider store={reduxStore}>
+      <div className="App">
+        <Team />
+      </div>
+    </Provider>
   );
 }
 

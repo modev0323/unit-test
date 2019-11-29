@@ -10,7 +10,7 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
 export default function FormDialog() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const [submitButtonState, setSubmitButtonState] = React.useState(true);
   const [teamNameErrorMsg, setTeamNameErrorMsg] = React.useState();
   const [teamNameError, setTeamNameError] = React.useState(false);
